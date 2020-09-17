@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title> Writting a Blog </title>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+ </head>
+<body>
+  <ul>
+   <li id='man'><a href='#'>Home</a></li>
+   <li id='man'><a href="view-blogs"> View Blogs </a></li>
+   <li id="man"><a href="resis">Resistraton</a></li>
+   <li id="man"><a href='logout'>Logout</a></li>li>
+
+  </ul>
+
+  <div id="header">
+    <h1>Hey Guys! Welcome to this page You can write your Blog Here </h1>
+  </div>
+  <div id="head">
+   <h2> Write Your Blog </h2>
+ </div>
+   <form action="add" method="post">
+    {% csrf_token %}
+    <table>
+      <tr>
+        <td><label for="Name" >Name</label></td>
+        <td><input type="text" name="Name" id="Name" placeholder='Name'> </td><br>
+      </tr>
+      <tr>
+        <td><label for="Gmail" >Gmail</label></td>
+        <td><input type="Gmail" name="Gmail" id="Gmail" placeholder='Email'> </td><br>
+      </tr>
+      <tr>
+        <td><label for="Content" >Content</label></td>
+        <td><textarea name='Content' id='Content' cols='100' rows='10' placeholder=' Enter your Content'></textarea></td><br>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="submit" value="Submit Your Blog"></td>
+      </tr>
+    </table>
+   </form>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title> Writting a Blog </title>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+ </head>
+<body>
+
+       <h1> View Blog Records </h1>
+       <table>
+         <thead>
+           <th> Name</th>
+           <th> Gmail </th>
+           <th> Content </th>
+         </thead>
+         {% for blog in blogs %}
+         <tr>
+           <td>{{blog.name}}</td>
+           <td>{{blog.Gmail}}</td>
+           <td>{{blog.content}}</td>
+         </tr>
+         {% endfor %}
+       </table>
+     </div>
+</body>
+</html>
